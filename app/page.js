@@ -52,6 +52,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="board-members" className="board-section section-space" aria-labelledby="board-heading">
+        <div className="shell"><div className="section-heading"><div><p className="eyebrow">Our leadership</p><h2 id="board-heading">Board Members<span className="gold-dot">.</span></h2></div><p>The people guiding<br />our shared direction.</p></div>
+          <div className="board-grid">
+            <article className="board-member"><div className="member-portrait"><img src={asset('leadership/ram-sharan-bhandari.jpeg')} alt="Ram Sharan Bhandari" width="600" height="750" loading="lazy" /></div><div className="member-caption"><h3>Ram Sharan Bhandari</h3><p>Chairperson</p></div></article>
+            <article className="board-member"><div className="member-portrait member-placeholder" role="img" aria-label="Portrait placeholder for Ajay Bhardwaj"><svg width="130" height="150" viewBox="0 0 130 150" fill="none" aria-hidden="true"><circle cx="65" cy="43" r="27" stroke="currentColor" strokeWidth="1.5" /><path d="M15 138v-13a50 50 0 0 1 100 0v13" stroke="currentColor" strokeWidth="1.5" /></svg><span>Portrait to follow</span></div><div className="member-caption"><h3>Ajay Bhardwaj</h3><p>CEO</p></div></article>
+          </div>
+        </div>
+      </section>
+
       <section id="careers" className="careers section-space">
         <div className="shell careers-grid"><div className="careers-photo"><img src={asset('technology.jpg')} alt="Colleagues sharing ideas and building new capabilities" loading="lazy" width="900" height="650" /><span>People who move us forward.</span></div><div className="careers-copy"><p className="eyebrow">Grow with purpose</p><h2>A shared ambition.<br />A stronger tomorrow<span className="gold-dot">.</span></h2><p>Meaningful work starts with people who care about what they build. Our culture brings together curiosity, responsibility and the ambition to keep raising the standard.</p><a href="#approach" className="text-link">Explore our values <Arrow /></a></div></div>
       </section>

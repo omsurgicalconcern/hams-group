@@ -18,3 +18,7 @@ OmniTrident's homepage was retrieved directly because the web reader could not a
 Contact information is shown only where published on the official sources. Company website buttons open the external website; no bookings, purchases or enquiries are submitted by this site. Sindhu Sadabahar has no verified standalone website in the supplied list, so its page links to the source company profile and the hospital category.
 
 The original supplied assets remain in `public/images/`. Where production WebP variants are used, they are resized/compressed copies; source files are preserved.
+
+## Leadership
+
+Board Members names and group roles were supplied by the user: Ram Sharan Bhandari, Chairperson; Ajay Bhardwaj, CEO. Ram Sharan Bhandari's portrait is sourced from the labelled founder profile at https://www.omsurgicalconcern.com/about, image https://www.omsurgicalconcern.com/leaders/R.S.%20Bhandari.jpeg. No verified photograph was found for Ajay Bhardwaj, so the page uses an explicit portrait placeholder.

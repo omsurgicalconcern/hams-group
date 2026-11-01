@@ -170,6 +170,19 @@ footer { padding:55px 0 25px; }
 .category-intro-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:80px; align-items:end; padding-top:12px; }
 .category-team-photo { margin-bottom:40px; background:#e8edf2; overflow:hidden; }
 .category-team-photo img { display:block; width:100%; height:auto; }
+.category-photo-hero { position:relative; overflow:hidden; min-height:460px; color:white; background:var(--navy); }
+.category-photo-background,.category-photo-shade { position:absolute; inset:0; width:100%; height:100%; }
+.category-photo-background { object-fit:cover; object-position:center 62%; }
+.category-photo-shade { background:linear-gradient(90deg,rgba(4,27,55,.91),rgba(6,36,70,.68) 52%,rgba(6,36,70,.4)); }
+.category-photo-hero>.shell { position:relative; padding-bottom:48px; }
+.category-photo-hero .breadcrumbs { color:#dae3ed; padding-bottom:32px; }
+.category-photo-hero .breadcrumbs [aria-current],.category-photo-hero .breadcrumbs a:hover { color:white; }
+.category-photo-hero .eyebrow { color:var(--gold); margin-bottom:19px; }
+.category-photo-hero h1 { font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:clamp(54px,6vw,80px); letter-spacing:-.04em; margin-bottom:20px; }
+.photo-hero-tagline { font-size:19px; line-height:1.5; margin-bottom:16px; color:white; }
+.photo-hero-description { max-width:610px; font-size:14px; line-height:1.9; color:#e0e7ef; margin-bottom:23px; }
+.photo-hero-count { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#e5c96e; }
+@media(max-width:650px) { .category-photo-hero { min-height:480px; } .category-photo-background { object-position:62% center; } .category-photo-shade { background:rgba(4,27,55,.76); } .photo-hero-tagline { font-size:17px; } .photo-hero-description { font-size:13px; } .category-photo-hero>.shell { padding-bottom:35px; } }
 .category-intro h1 { color:var(--navy); font-size:clamp(52px,6.4vw,86px); letter-spacing:-.06em; margin-bottom:25px; line-height:1.02; }
 .category-tagline { font-size:16px; color:var(--muted); margin:0; line-height:1.6; }
 .category-lead { border-left:1px solid #dfe4e9; padding-left:45px; }

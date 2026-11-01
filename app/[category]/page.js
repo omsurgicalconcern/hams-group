@@ -20,11 +20,14 @@ export default async function CategoryPage({ params }) {
   if (!category) notFound();
   const members = companiesIn(slug);
   return <><SiteHeader /><main id="main">
-    <section className="category-intro"><div className="shell">
+    {slug === 'hospital' ? <section className="category-photo-hero" aria-labelledby="hospital-category-title">
+      <img className="category-photo-background" src={asset('Hospital/hams-team.png')} alt="HAMS Hospital team gathered outside the hospital" width="1000" height="523" fetchPriority="high" />
+      <div className="category-photo-shade" />
+      <div className="shell"><Breadcrumbs items={[{ label: 'Home', href: sitePath('/') }, { label: category.name }]} /><p className="eyebrow">Our businesses / {category.number}</p><h1 id="hospital-category-title">{category.name}<span>.</span></h1><p className="photo-hero-tagline">{category.message}</p><p className="photo-hero-description">{category.description}</p><span className="photo-hero-count">{String(members.length).padStart(2, '0')} companies · One shared purpose</span></div>
+    </section> : <section className="category-intro"><div className="shell">
       <Breadcrumbs items={[{ label: 'Home', href: sitePath('/') }, { label: category.name }]} />
-      {slug === 'hospital' && <div className="category-team-photo"><img src={asset('Hospital/hams-team.png')} alt="HAMS Hospital team gathered outside the hospital" width="1000" height="523" fetchPriority="high" /></div>}
       <div className="category-intro-grid"><div><p className="eyebrow">Our businesses / {category.number}</p><h1>{category.name}<span>.</span></h1><p className="category-tagline">{category.message}</p></div><div className="category-lead"><h2>{category.headline}</h2><p>{category.description}</p><span className="category-member-count">{String(members.length).padStart(2, '0')} {members.length === 1 ? 'company' : 'companies'} · One shared purpose</span></div></div>
-    </div></section>
+    </div></section>}
     <section className="section-space category-companies"><div className="shell"><div className="section-heading"><div><p className="eyebrow">Meet our companies</p><h2>Progress, in practice<span className="gold-dot">.</span></h2></div><p>Discover the people and businesses<br />behind our shared purpose.</p></div><div className={`company-grid${members.length === 1 ? ' single-company-grid' : ''}`}>{members.map(company => <CompanyCard company={company} key={company.slug} />)}</div></div></section>
     <section className="category-purpose"><div className="shell"><p className="eyebrow text-gold">{category.name} at HAMS</p><h2>{category.headline}</h2><div className="category-pillars">{category.focus.map((focus, index) => <div key={focus}><span>0{index + 1}</span><h3>{focus}</h3></div>)}</div></div></section>
     <section className="section-space more-businesses"><div className="shell"><p className="eyebrow">One HAMS</p><h2>Explore our other businesses<span className="gold-dot">.</span></h2><div className="other-category-links">{categories.filter(item => item.slug !== slug).map(item => <a href={sitePath(`/${item.slug}/`)} key={item.slug}>{item.name}<Arrow diagonal /></a>)}</div></div></section>

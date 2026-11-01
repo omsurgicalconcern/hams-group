@@ -347,7 +347,7 @@ footer { padding:55px 0 25px; }
 .mobile-business-dropdown .business-dropdown-trigger { width:100%; justify-content:space-between; padding:18px 0; font-size:14px; color:var(--navy); border-bottom:1px solid #eef0f3; }
 .mobile-business-dropdown .business-dropdown-links { position:static; min-width:0; box-shadow:none; border:0; padding:0 0 0 18px; }
 .mobile-nav .business-dropdown-links>a { font-size:13px; padding:15px 0; }
-.board-section { background:#f7f8fa; border-bottom:1px solid #e3e8ed; }
+.board-section { background:#faf9f6; border-bottom:1px solid #e3e8ed; }
 .board-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:45px; max-width:900px; }
 .member-portrait { aspect-ratio:4/4.5; background:#e9edf2; overflow:hidden; }
 .member-portrait>img { width:100%; height:100%; object-fit:cover; object-position:center 22%; }
@@ -358,5 +358,22 @@ footer { padding:55px 0 25px; }
 .member-caption p { font-size:11px; text-transform:uppercase; letter-spacing:.15em; color:#947318; margin:0; }
 @media(max-width:650px) { .board-grid { gap:25px; } .member-caption h3 { font-size:19px; } .member-portrait { aspect-ratio:3/4; } .member-placeholder svg { width:75px; height:95px; } .member-placeholder span { font-size:8px; letter-spacing:.08em; } }
 @media(max-width:420px) { .board-grid { grid-template-columns:1fr; gap:35px; } .member-portrait { aspect-ratio:4/4.2; } .member-caption h3 { font-size:24px; } }
+.leadership-profiles { display:grid; gap:75px; }
+.leadership-title { font-family:Georgia,'Times New Roman',serif; font-size:clamp(30px,3.4vw,46px); font-weight:400; color:var(--navy); line-height:1.2; letter-spacing:-.035em; margin-bottom:28px; }
+.leadership-title em { color:#a7862b; font-weight:400; }
+.leadership-panel { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); background:white; border:1px solid #e1e6eb; border-radius:8px; overflow:hidden; box-shadow:0 16px 40px #082d5b06; }
+.leadership-portrait { position:relative; min-height:490px; background:#e9edf1; }
+.leadership-portrait img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 23%; }
+.leadership-copy { padding:55px 60px; align-self:center; }
+.leadership-copy .eyebrow { font-size:10px; margin-bottom:22px; }
+.leadership-copy h4 { font-family:Georgia,'Times New Roman',serif; font-weight:400; color:var(--navy); font-size:clamp(28px,2.8vw,38px); line-height:1.22; letter-spacing:-.025em; margin:0 0 25px; }
+.leadership-copy>p:not(.eyebrow) { color:var(--muted); font-size:14px; line-height:1.9; margin-bottom:18px; }
+.leadership-signature { margin-top:30px; padding-top:24px; border-top:1px solid #e5e8eb; }
+.leadership-signature>span { font-family:Georgia,'Times New Roman',serif; font-size:24px; color:var(--navy); }
+.leadership-signature>p { margin:10px 0 0; text-transform:uppercase; font-size:10px; color:#947318; letter-spacing:.18em; }
+.leadership-reverse .leadership-panel { grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); }
+.leadership-reverse .leadership-portrait { order:2; }
+@media(max-width:1000px) { .leadership-copy { padding:35px; } .leadership-portrait { min-height:450px; } .leadership-panel,.leadership-reverse .leadership-panel { grid-template-columns:1fr 1fr; } }
+@media(max-width:700px) { .leadership-panel,.leadership-reverse .leadership-panel { grid-template-columns:1fr; } .leadership-reverse .leadership-portrait { order:0; } .leadership-portrait { min-height:0; height:400px; } .leadership-portrait img { object-position:center 20%; } .leadership-copy { padding:30px 25px; } .leadership-profiles { gap:50px; } .leadership-title { font-size:33px; margin-bottom:22px; } .leadership-signature>span { font-size:23px; } }
 @media(max-width:1000px) { .profile-intro,.profile-row { gap:40px; grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr); } .profile-services { grid-template-columns:1fr; gap:18px; } }
 @media(max-width:650px) { .profile-intro,.profile-row { grid-template-columns:1fr; gap:30px; } .profile-intro { padding-top:0; padding-bottom:40px; } .profile-image { max-width:430px; width:100%; } .profile-image figcaption { margin-top:10px; } .profile-logo { max-width:300px; } .profile-copy h1 { font-size:38px; } .profile-tagline { font-size:18px; } .profile-row { padding:35px 0; gap:25px; } .profile-row h2 br { display:none; } .profile-row h2 { font-size:27px; } .profile-contact dl>div { grid-template-columns:80px 1fr; gap:18px; } }

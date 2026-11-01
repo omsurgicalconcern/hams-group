@@ -21,7 +21,7 @@ export default async function CategoryPage({ params }) {
   const members = companiesIn(slug);
   return <><SiteHeader /><main id="main">
     {slug === 'hospital' ? <section className="category-photo-hero" aria-labelledby="hospital-category-title">
-      <img className="category-photo-background" src={asset('Hospital/hams-team.png')} alt="HAMS Hospital team gathered outside the hospital" width="1000" height="523" fetchPriority="high" />
+      <img className="category-photo-background" src={asset('Hospital/hams-team-upscaled.webp')} alt="HAMS Hospital team gathered outside the hospital" width="3000" height="1569" fetchPriority="high" />
       <div className="category-photo-shade" />
       <div className="shell"><Breadcrumbs items={[{ label: 'Home', href: sitePath('/') }, { label: category.name }]} /><p className="eyebrow">Our businesses / {category.number}</p><h1 id="hospital-category-title">{category.name}<span>.</span></h1><p className="photo-hero-tagline">{category.message}</p><p className="photo-hero-description">{category.description}</p><span className="photo-hero-count">{String(members.length).padStart(2, '0')} companies · One shared purpose</span></div>
     </section> : <section className="category-intro"><div className="shell">

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+const asset = (name) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/${name}`;
+
 const businesses = [
   { id: 'hospitals', name: 'Hospitals', message: 'Better Health. Humanly Delivered.', image: 'hospitals.jpg', alt: 'Healthcare professional in a clinical setting', number: '01', title: 'Care begins with people.', description: 'Helping people live healthier lives through care, capability and technology. Our healthcare direction puts dignity, confidence and the person behind every need at the centre.', focus: ['Human-centred care', 'Clinical capability', 'Healthier communities'] },
   { id: 'automobiles', name: 'Automobiles', message: 'Greater Mobility. More Possibility.', image: 'automobiles.jpg', alt: 'Modern vehicle outdoors', number: '02', title: 'More freedom to move.', description: 'Mobility connects people to work, family and opportunity. Our automotive direction is built around greater freedom, access and confidence in everyday journeys.', focus: ['Everyday mobility', 'Dependable service', 'Access and opportunity'] },
@@ -41,7 +43,7 @@ export default function Home() {
     <a href="#main" className="skip-link">Skip to content</a>
     <header className="site-header">
       <div className="shell flex items-center justify-between gap-8">
-        <a href="#" aria-label="HAMS Group home" className="logo"><img src="/images/hams-logo.svg" alt="HAMS Group — Moving Life Forward" width="210" height="73" /></a>
+        <a href="#" aria-label="HAMS Group home" className="logo"><img src={asset('hams-logo.svg')} alt="HAMS Group — Moving Life Forward" width="210" height="73" /></a>
         <nav aria-label="Main navigation" className="desktop-nav items-center gap-8">
           {nav.map(([name, href]) => <a key={href} href={href}>{name}</a>)}
         </nav>
@@ -53,7 +55,7 @@ export default function Home() {
 
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero-image" src="/images/himalayan-sunrise.png" alt="Sunrise over the Himalayan mountains and Nepalese foothills" fetchPriority="high" />
+        <img className="hero-image" src={asset('himalayan-sunrise.png')} alt="Sunrise over the Himalayan mountains and Nepalese foothills" fetchPriority="high" />
         <div className="hero-shade" />
         <div className="shell hero-content">
           <p className="eyebrow text-gold">Human progress</p>
@@ -79,7 +81,7 @@ export default function Home() {
           <div className="section-heading"><div><p className="eyebrow">Our businesses</p><h2>Progress across<br className="mobile-break" /> possibilities<span className="gold-dot">.</span></h2></div><p>Four expressions of one belief.<br />A better everyday life.</p></div>
           <div className="business-grid">
             {businesses.map(b => <button className="business-card group text-left" key={b.id} aria-haspopup="dialog" onClick={e => { lastTrigger.current = e.currentTarget; setSelected(b); }}>
-              <div className="business-image"><img src={`/images/${b.image}`} alt={b.alt} loading="lazy" width="600" height="700" /><span className="business-number">{b.number}</span><span className="image-arrow"><Arrow diagonal /></span></div>
+              <div className="business-image"><img src={asset(b.image)} alt={b.alt} loading="lazy" width="600" height="700" /><span className="business-number">{b.number}</span><span className="image-arrow"><Arrow diagonal /></span></div>
               <h3>{b.name}</h3><p>{b.message}</p><span className="card-link">Explore business <Arrow /></span>
             </button>)}
           </div>
@@ -95,16 +97,17 @@ export default function Home() {
       </section>
 
       <section id="careers" className="careers section-space">
-        <div className="shell careers-grid"><div className="careers-photo"><img src="/images/technology.jpg" alt="Colleagues sharing ideas and building new capabilities" loading="lazy" width="900" height="650" /><span>People who move us forward.</span></div><div className="careers-copy"><p className="eyebrow">Grow with purpose</p><h2>A shared ambition.<br />A stronger tomorrow<span className="gold-dot">.</span></h2><p>Meaningful work starts with people who care about what they build. Our culture brings together curiosity, responsibility and the ambition to keep raising the standard.</p><a href="#approach" className="text-link">Explore our values <Arrow /></a></div></div>
+        <div className="shell careers-grid"><div className="careers-photo"><img src={asset('technology.jpg')} alt="Colleagues sharing ideas and building new capabilities" loading="lazy" width="900" height="650" /><span>People who move us forward.</span></div><div className="careers-copy"><p className="eyebrow">Grow with purpose</p><h2>A shared ambition.<br />A stronger tomorrow<span className="gold-dot">.</span></h2><p>Meaningful work starts with people who care about what they build. Our culture brings together curiosity, responsibility and the ambition to keep raising the standard.</p><a href="#approach" className="text-link">Explore our values <Arrow /></a></div></div>
       </section>
 
       <section id="connect" className="connect section-space"><div className="shell"><p className="eyebrow">The next chapter</p><h2>Building a better tomorrow,<br />together<span className="gold-dot">.</span></h2><div className="connect-bottom"><p>Discover the possibilities across HAMS.</p><a className="button button-navy" href="#businesses">Find your business area <Arrow /></a></div></div></section>
     </main>
 
-    <footer><div className="shell"><div className="footer-main"><a href="#" className="footer-logo" aria-label="Back to HAMS Group home"><img src="/images/hams-logo.svg" alt="HAMS Group" width="210" height="73" /></a><p>Many businesses.<br />One human purpose.</p><nav aria-label="Footer navigation">{nav.map(([name, href]) => <a key={href} href={href}>{name}</a>)}</nav><a href="#" className="back-top">Back to top <span>↑</span></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} HAMS Group.</span><span>Moving Life Forward.</span><span>Nepal</span></div></div></footer>
+    <footer><div className="shell"><div className="footer-main"><a href="#" className="footer-logo" aria-label="Back to HAMS Group home"><img src={asset('hams-logo.svg')} alt="HAMS Group" width="210" height="73" /></a><p>Many businesses.<br />One human purpose.</p><nav aria-label="Footer navigation">{nav.map(([name, href]) => <a key={href} href={href}>{name}</a>)}</nav><a href="#" className="back-top">Back to top <span>↑</span></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} HAMS Group.</span><span>Moving Life Forward.</span><span>Nepal</span></div></div></footer>
 
     <dialog ref={dialogRef} className="business-dialog" aria-labelledby="business-dialog-title" onCancel={e => { e.preventDefault(); closeBusiness(); }} onClick={e => { if (e.target === e.currentTarget) closeBusiness(); }}>
-      {selected && <div className="dialog-content"><button className="dialog-close" onClick={closeBusiness} aria-label="Close business details" autoFocus>×</button><div className="dialog-photo"><img src={`/images/${selected.image}`} alt={selected.alt} /></div><div className="dialog-copy"><p className="eyebrow">HAMS {selected.name}</p><h2 id="business-dialog-title">{selected.title}</h2><p>{selected.description}</p><ul>{selected.focus.map(f => <li key={f}>{f}</li>)}</ul><p className="dialog-signature">{selected.message}</p><button className="text-link" onClick={closeBusiness}>Back to our businesses <Arrow /></button></div></div>}
+      {selected && <div className="dialog-content"><button className="dialog-close" onClick={closeBusiness} aria-label="Close business details" autoFocus>×</button><div className="dialog-photo"><img src={asset(selected.image)} alt={selected.alt} /></div><div className="dialog-copy"><p className="eyebrow">HAMS {selected.name}</p><h2 id="business-dialog-title">{selected.title}</h2><p>{selected.description}</p><ul>{selected.focus.map(f => <li key={f}>{f}</li>)}</ul><p className="dialog-signature">{selected.message}</p><button className="text-link" onClick={closeBusiness}>Back to our businesses <Arrow /></button></div></div>}
     </dialog>
   </>;
 }
+

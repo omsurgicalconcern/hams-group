@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@font-face { font-family:Inter; src:url('/images/InterVariable.woff2') format('woff2'); font-weight:100 900; font-display:swap; }
 
 @theme { --color-navy: #082d5b; --color-gold: #d4af37; --font-sans: 'Inter', 'Arial', sans-serif; }
 :root { --navy:#082d5b; --gold:#d4af37; --ink:#17212b; --muted:#647184; --light:#f7f8fa; }

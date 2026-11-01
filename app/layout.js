@@ -1,4 +1,7 @@
 import './globals.css';
+import localFont from 'next/font/local';
+
+const inter = localFont({ src: '../public/images/InterVariable.woff2', display: 'swap' });
 
 export const metadata = {
   title: 'HAMS Group | Moving Life Forward',
@@ -6,5 +9,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en"><body className={inter.className}>{children}</body></html>;
 }

@@ -47,11 +47,10 @@ export default function BusinessCarousel({ category }) {
         </a>)}
       </div>
       <span className="business-number">{category.number}</span>
-      {items.length > 1 && <button className="carousel-play" aria-label={`${playing ? 'Pause' : 'Play'} ${category.name.toLowerCase()} slideshow`} onClick={() => setPlaying(!playing)}>{playing ? <span aria-hidden="true">Ⅱ</span> : <span aria-hidden="true">▶</span>}</button>}
     </div>
     <div className="carousel-controls">
       <span className="carousel-count">{String(active + 1).padStart(2, '0')} <span>/ {String(items.length).padStart(2, '0')}</span></span>
-      {items.length > 1 ? <div className="carousel-arrows"><button aria-controls={`carousel-${category.slug}`} aria-label={`Previous ${category.name.toLowerCase()} company`} onClick={() => show(active - 1)}>←</button><button aria-controls={`carousel-${category.slug}`} aria-label={`Next ${category.name.toLowerCase()} company`} onClick={() => show(active + 1)}>→</button></div> : <span className="single-company">Company</span>}
+      {items.length === 1 && <span className="single-company">Company</span>}
     </div>
     <h3><a href={sitePath(`/${category.slug}/`)}>{category.name}</a></h3>
     <p>{category.message}</p>

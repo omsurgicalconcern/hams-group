@@ -20,7 +20,7 @@ Install dependencies with `pnpm install`, then run `pnpm dev` and open http://12
 - `public/images/`: website assets. Inter font license is included beside the font.
 - `WEBSITE-BRIEF.md`: source content direction and information needed before public launch.
 
-Homepage portfolio cards show the companies in each category. Multi-company cards support horizontal touch scrolling, previous/next buttons and pausable rotation. Rotation pauses on hover/focus and while offscreen or the browser is hidden; reduced-motion preferences disable automatic rotation. Category headings open category pages; company images open company pages. Mobile navigation closes when a destination is selected.
+Homepage portfolio cards show the companies in each category with horizontal touch scrolling and automatic rotation. Rotation pauses on hover/focus and while offscreen or the browser is hidden; reduced-motion preferences disable automatic rotation. Slide counters remain visible, with no carousel control buttons. Category headings open category pages; company images open company pages. Desktop and mobile navigation link directly to the four category pages. Company-page photographs retain their full original aspect ratio without cropping.
 
 GitHub Pages deploys automatically on pushes to `main`. The workflow builds with `NEXT_PUBLIC_BASE_PATH=/hams-group`; leave the variable unset for local development at the domain root. All 13 content pages are statically exported.
 

@@ -133,18 +133,19 @@ footer { padding:55px 0 25px; }
 .carousel-visual { position:relative; background:var(--light); }
 .company-track { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; overscroll-behavior-x:contain; }
 .company-track::-webkit-scrollbar { display:none; }
-.company-slide { position:relative; flex:0 0 100%; min-width:0; aspect-ratio:4/4.8; scroll-snap-align:start; scroll-snap-stop:always; overflow:hidden; background:#edf1f5; }
-.company-slide>img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
-.company-slide:hover>img { transform:scale(1.035); }
-.company-slide:after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(3,24,49,.2),transparent 35%,rgba(3,24,49,.08) 50%,rgba(3,24,49,.85)); pointer-events:none; }
+.company-slide { position:relative; display:grid; grid-template-rows:minmax(0,1fr) auto; flex:0 0 100%; min-width:0; aspect-ratio:4/4.8; scroll-snap-align:start; scroll-snap-stop:always; overflow:hidden; background:#f4f5f7; }
+.company-slide>img { width:100%; height:100%; min-height:0; object-fit:contain; padding:8px; }
+.company-slide:hover>img { transform:none; }
+.company-slide:after { display:none; }
 .company-slide:focus-visible { outline-offset:-5px; }
-.logo-slide>img { object-fit:contain; padding:28px; background:#f4f5f7; }
+.logo-slide>img { object-fit:contain; padding:24px; background:transparent; }
 .product-slide>img { object-fit:contain; padding:15px; }
 .company-card-image.is-product>img,.company-cover.is-product>img { object-fit:contain; padding:25px; }
 .company-cover.is-product .cover-label { color:var(--navy); }
 .company-cover.is-product:after { background:none; }
-.logo-slide:after { background:linear-gradient(0deg,rgba(3,24,49,.9),transparent 38%); }
-.slide-caption { position:absolute; z-index:1; bottom:20px; left:19px; right:16px; display:flex; align-items:center; justify-content:space-between; gap:12px; color:white; font-size:14px; font-weight:600; line-height:1.4; }
+.logo-slide:after { display:none; }
+.slide-caption { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:12px; color:white; background:var(--navy); padding:15px 14px; min-height:58px; font-size:13px; font-weight:600; line-height:1.4; }
+.carousel-visual>.business-number { top:10px; left:10px; background:var(--navy); padding:4px 6px; }
 .slide-caption svg { flex-shrink:0; width:19px; }
 .carousel-play { position:absolute; z-index:2; top:13px; right:13px; width:30px; height:30px; display:grid; place-items:center; border:1px solid #ffffff75; color:white; background:#082d5b80; font-size:12px; }
 .carousel-controls { display:flex; align-items:center; justify-content:space-between; padding:12px 0 17px; min-height:57px; }
@@ -276,7 +277,7 @@ footer { padding:55px 0 25px; }
 }
 @media(max-width:480px) {
   .company-slide { aspect-ratio:3/4; }
-  .slide-caption { font-size:12px; bottom:15px; left:12px; right:10px; gap:7px; }
+  .slide-caption { font-size:12px; padding:12px 10px; gap:7px; }
   .slide-caption svg { width:16px; }
   .carousel-play { top:9px; right:9px; width:26px; height:26px; }
   .carousel-controls { padding-bottom:15px; }

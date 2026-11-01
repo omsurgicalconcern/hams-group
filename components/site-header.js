@@ -28,8 +28,8 @@ export default function SiteHeader() {
     <a href="#main" className="skip-link">Skip to content</a>
     <header className="site-header"><div className="shell flex items-center justify-between gap-8">
       <a href={sitePath('/')} aria-label="HAMS Group home" className="logo"><img src={asset('hams-logo.svg')} alt="HAMS Group — Moving Life Forward" width="210" height="73" /></a>
-      <nav className="desktop-nav items-center gap-8" aria-label="Main navigation"><a href={sitePath('/')}>Home</a><BusinessDropdown /><a href={sitePath('/#board-members')}>Board Members</a></nav>
+      <nav className="desktop-nav items-center gap-8" aria-label="Main navigation"><a href={sitePath('/')}>Home</a><a href={sitePath('/about/')}>About</a><BusinessDropdown /><a href={sitePath('/board-members/')}>Board Members</a></nav>
       <button className="menu-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className={`menu-lines${open ? ' is-open' : ''}`}><i /><i /></span></button>
-    </div>{open && <nav id="mobile-menu" className="mobile-nav" aria-label="Mobile navigation"><a href={sitePath('/')} onClick={() => setOpen(false)}>Home<Arrow /></a><BusinessDropdown mobile onNavigate={() => setOpen(false)} /><a href={sitePath('/#board-members')} onClick={() => setOpen(false)}>Board Members<Arrow /></a></nav>}</header>
+    </div>{open && <nav id="mobile-menu" className="mobile-nav" aria-label="Mobile navigation"><a href={sitePath('/')} onClick={() => setOpen(false)}>Home<Arrow /></a><a href={sitePath('/about/')} onClick={() => setOpen(false)}>About<Arrow /></a><BusinessDropdown mobile onNavigate={() => setOpen(false)} /><a href={sitePath('/board-members/')} onClick={() => setOpen(false)}>Board Members<Arrow /></a></nav>}</header>
   </>;
 }

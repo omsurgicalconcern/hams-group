@@ -1,5 +1,8 @@
 import './globals.css';
+import './redesign.css';
 import localFont from 'next/font/local';
+import ScrollReveal from '../components/scroll-reveal';
+import SmoothScroll from '../components/smooth-scroll';
 
 const inter = localFont({ src: '../public/images/InterVariable.woff2', display: 'swap' });
 
@@ -9,5 +12,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body className={inter.className}>{children}</body></html>;
+  return <html lang="en"><body className={inter.className}>{children}<ScrollReveal /><SmoothScroll /></body></html>;
 }

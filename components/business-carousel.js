@@ -47,6 +47,7 @@ export default function BusinessCarousel({ category }) {
         </a>)}
       </div>
       <span className="business-number">{category.number}</span>
+      {items.length > 1 && <div className="carousel-pagination" aria-label={`${category.name} slides`}>{items.map((company, index) => <button key={company.slug} className={index === active ? 'is-active' : ''} aria-label={`Show ${company.shortName}`} aria-current={index === active ? 'true' : undefined} onClick={() => show(index)}><span /></button>)}</div>}
     </div>
     <div className="carousel-controls">
       <span className="carousel-count">{String(active + 1).padStart(2, '0')} <span>/ {String(items.length).padStart(2, '0')}</span></span>

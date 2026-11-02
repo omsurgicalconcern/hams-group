@@ -69,8 +69,9 @@ export function PurposeStatement() {
 export function ChairpersonStatement() {
   const statement='HAMS Group brings diverse businesses together around one human purpose: moving life forward. Better care, greater mobility and useful technology are all expressions of that shared ambition.';
   return <section id="chairperson" className="chairperson-section" aria-label="Our shared purpose and chairperson">
-    <div className="chairperson-portrait"><img src={asset('leadership/ram-sharan-bhandari.jpeg')} alt="Ram Sharan Bhandari, Chairperson of HAMS Group" width="600" height="800" loading="eager"/></div>
+    <div className="chairperson-portrait"><img src={asset('leadership/ram-sharan-bhandari-portrait.png')} alt="Ram Sharan Bhandari, Chairperson of HAMS Group" width="600" height="800" loading="eager"/></div>
     <div className="chairperson-copy"><div className="chairperson-speech"><p className="eyebrow">HAMS Group / Our shared purpose</p><p className="chairperson-statement" aria-label={statement}>{statement.split(' ').map((word,index)=><span className="chairperson-word" key={index} aria-hidden="true">{[...word].map((char,charIndex)=><span data-reading-char key={charIndex}>{char}</span>)}{' '}</span>)}</p><svg className="speech-outline" viewBox="0 0 1000 160" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 30H335V140L425 30H980Q998 30 998 10V0" vectorEffect="non-scaling-stroke"/></svg></div><div className="chairperson-info"><h2>Ram Sharan Bhandari</h2><p>Chairperson, HAMS Group</p><a className="profile-link" href={sitePath('/board-members/')}>View profile<Arrow diagonal/></a></div></div>
   </section>;
 }
+
 

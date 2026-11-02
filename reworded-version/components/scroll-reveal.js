@@ -57,10 +57,10 @@ export default function ScrollReveal() {
         const hero = document.querySelector('.cinematic-hero');
         if (hero) {
           gsap.to(hero, {'--cover-shade': .38, ease:'none', scrollTrigger:{
-            trigger:hero, start:'top top', end:'bottom top', pin:true,
-            pinSpacing:false, scrub:.7, anticipatePin:1, invalidateOnRefresh:true,
+            trigger:hero, start:'top top', end:'bottom top',
+            scrub:.7, invalidateOnRefresh:true,
           }});
-          gsap.to(hero.querySelectorAll('.hero-scene'), {yPercent:-18,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:.7,invalidateOnRefresh:true}});
+          gsap.to(hero.querySelectorAll('.scene-copy'), {y:'-=80',ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:.5,invalidateOnRefresh:true}});
         }
         document.querySelectorAll('.reading-statement, .chairperson-statement').forEach(statement => {
           const chars=statement.querySelectorAll('[data-reading-word], [data-reading-char]');

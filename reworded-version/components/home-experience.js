@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { asset, categories, companies, companiesIn, sitePath } from '../lib/businesses';
 import Arrow from './arrow';
+import { gsap } from 'gsap';
 
 export const sectorImages = {
   hospital: 'Hospital/hams-team-upscaled.webp',
@@ -18,6 +19,19 @@ const slides = [
 export function CinematicHero() {
   const [active,setActive] = useState(0);
   const [previous,setPrevious] = useState(null);
+  useEffect(() => {
+    const media = gsap.matchMedia();
+    media.add('(prefers-reduced-motion: no-preference)', () => {
+      const scene = document.querySelector('.hero-scene.active');
+      if (!scene) return;
+      const timeline = gsap.timeline();
+      timeline.fromTo(scene, {clipPath:'inset(calc(100% - 155px) 4% 50px calc(100% - 250px))'}, {clipPath:'inset(0%)',duration:1.1,ease:'power3.inOut'})
+        .fromTo(scene.querySelectorAll('.scene-copy > *'),{autoAlpha:0,y:45},{autoAlpha:1,y:0,stagger:.2,duration:1,ease:'power3.out'},.45)
+        .fromTo(scene.querySelector('.scene-image'),{scale:1.08},{scale:1,duration:11,ease:'none'},0);
+      return () => timeline.revert();
+    });
+    return () => media.revert();
+  }, [active]);
   function changeSlide(index) { setPrevious(active); setActive(index); }
   useEffect(()=>{
     const preference=window.matchMedia('(prefers-reduced-motion: reduce)');

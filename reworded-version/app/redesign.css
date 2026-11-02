@@ -246,3 +246,11 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 @media(max-width:1023px) { .chairperson-section { grid-template-columns:1fr; } .chairperson-portrait img { height:70vh; object-position:center 23%; } .chairperson-copy { padding:40px 20px; } .chairperson-statement { font-size:18px; line-height:1.4; } .chairperson-speech { padding-bottom:130px; } .chairperson-info h2 { font-size:28px; } .chairperson-info>p { font-size:18px; } .scene-copy h1 { font-size:44px; } }
 @media(max-width:600px) { .scene-copy { bottom:32%; } .scene-copy h1 { font-size:37px; } .scene-copy>p:not(.eyebrow) { margin:20px 0 25px; } .scene-copy .eyebrow { font-size:9px; } .hero-controls { margin-right:95px; gap:2px; } .hero-controls button { font-size:17px; padding:6px; } .hero-dots { right:20px; width:70px; } .hero-navigation { bottom:40px; } .scroll-cue { font-size:7px; } .chairperson-portrait img { height:65vh; object-position:center top; } .chairperson-statement { font-size:19px; line-height:1.5; } .chairperson-copy { padding:35px 20px 45px; } .chairperson-info h2 { font-size:25px; } .chairperson-info>p { font-size:16px; } }
 @media(prefers-reduced-motion:reduce) { .hero-scene.active { clip-path:none; animation:none!important; } .chairperson-word>[data-reading-char] { opacity:1; } }
+
+/* GSAP owns transforms and text opacity; avoid competing CSS timelines. */
+.hero-scene.active,.active .scene-copy>* { animation:none; }
+.scene-image,.chairperson-portrait img,.category-photo-background,.sector-panel>img { animation:none; transition:none; }
+.progress-story>img { top:-7%; height:114%; }
+.category-photo-hero,.chairperson-portrait { overflow:hidden; }
+.category-photo-background { top:-7%; height:114%; }
+.chairperson-word>[data-reading-char],.reading-statement span { transition:none; }

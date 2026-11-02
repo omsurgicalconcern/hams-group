@@ -1,0 +1,58 @@
+[
+  {
+    "name": "IDFI",
+    "image": "brands/medical/idfi.png"
+  },
+  {
+    "name": "Erba Mannheim",
+    "image": "brands/medical/erba-mannheim.png"
+  },
+  {
+    "name": "DUAB",
+    "image": "brands/medical/duab.png"
+  },
+  {
+    "name": "BodiTech",
+    "image": "brands/medical/boditech.png"
+  },
+  {
+    "name": "Abbott",
+    "image": "brands/medical/abbott.png"
+  },
+  {
+    "name": "YHLO",
+    "image": "brands/medical/yhlo.png"
+  },
+  {
+    "name": "GlucoDr",
+    "image": "brands/medical/glucodr.png"
+  },
+  {
+    "name": "JINSHAN",
+    "image": "brands/medical/jinshan.png"
+  },
+  {
+    "name": "GEMMY",
+    "image": "brands/medical/gemmy.png"
+  },
+  {
+    "name": "Motic",
+    "image": "brands/medical/motic.png"
+  },
+  {
+    "name": "MEDICA",
+    "image": "brands/medical/medica.png"
+  },
+  {
+    "name": "Intec",
+    "image": "brands/medical/intec.png"
+  },
+  {
+    "name": "Almedicus",
+    "image": "brands/medical/almedicus.png"
+  },
+  {
+    "name": "Keyu",
+    "image": "brands/medical/keyu.png"
+  }
+]

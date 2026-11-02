@@ -262,7 +262,7 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 /* The next panel rises above the pinned hero. */
 .cinematic-hero { z-index:0; --cover-shade:0; }
 .cinematic-hero:after { content:''; position:absolute; inset:0; background:#03172d; opacity:var(--cover-shade); pointer-events:none; z-index:2; }
-.chairperson-section { position:relative; z-index:3; box-shadow:0 -25px 70px #03172d20; }
+.chairperson-section { position:relative; z-index:10; box-shadow:0 -25px 70px #03172d20; }
 @media(prefers-reduced-motion:reduce) { .chairperson-section { box-shadow:none; } }
 
 .business-accordion { display:flex; gap:8px; margin:50px 4% 0; height:620px; }

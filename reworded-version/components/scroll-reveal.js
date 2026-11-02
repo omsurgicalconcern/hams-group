@@ -53,6 +53,13 @@ export default function ScrollReveal() {
         ScrollTrigger.refresh();
       }
       context.add(() => {
+        const hero = document.querySelector('.cinematic-hero');
+        if (hero) {
+          gsap.to(hero, {'--cover-shade': .38, ease:'none', scrollTrigger:{
+            trigger:hero, start:'top top', end:'bottom top', pin:true,
+            pinSpacing:false, scrub:.7, anticipatePin:1, invalidateOnRefresh:true,
+          }});
+        }
         document.querySelectorAll('.reading-statement, .chairperson-statement').forEach(statement => {
           const chars=statement.querySelectorAll('[data-reading-word], [data-reading-char]');
           gsap.fromTo(chars,{opacity:.18},{opacity:1,stagger:.035,ease:'none',scrollTrigger:{trigger:statement,start:'top 85%',end:'bottom 40%',scrub:.65}});

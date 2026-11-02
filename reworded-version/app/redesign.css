@@ -254,3 +254,13 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 .category-photo-hero,.chairperson-portrait { overflow:hidden; }
 .category-photo-background { top:-7%; height:114%; }
 .chairperson-word>[data-reading-char],.reading-statement span { transition:none; }
+
+/* Center the entire hero copy within the full viewport. */
+.scene-copy { top:50%; bottom:auto; transform:translateY(-50%); }
+.search-content input { padding:18px 20px; border:1px solid #dce2e8; border-bottom-color:var(--gold); border-radius:4px; }
+.sector-tabs button { padding-block:23px; }
+/* The next panel rises above the pinned hero. */
+.cinematic-hero { z-index:0; --cover-shade:0; }
+.cinematic-hero:after { content:''; position:absolute; inset:0; background:#03172d; opacity:var(--cover-shade); pointer-events:none; z-index:2; }
+.chairperson-section { position:relative; z-index:3; box-shadow:0 -25px 70px #03172d20; }
+@media(prefers-reduced-motion:reduce) { .chairperson-section { box-shadow:none; } }

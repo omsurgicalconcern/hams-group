@@ -1,11 +1,12 @@
 import SiteHeader from '../components/site-header';
+import BusinessAccordion from '../components/business-accordion';
 import SiteFooter from '../components/site-footer';
 import { CinematicHero, BusinessExplorer, ChairpersonStatement } from '../components/home-experience';
 import Arrow from '../components/arrow';
 import { asset, sitePath } from '../lib/businesses';
 
 export default function Home() {
-  return <><SiteHeader/><main id="main"><CinematicHero/><ChairpersonStatement/><BusinessExplorer/>
+  return <><SiteHeader/><main id="main"><CinematicHero/><ChairpersonStatement/><BusinessAccordion/>
     <section className="progress-stories" aria-label="What moves us">
       {[{label:'Human first',title:<>Progress with<br/>people at its heart.</>,image:'Hospital/hams-team-upscaled.webp',text:'Our measure of progress is what becomes possible for people, organisations and communities.',link:'/about/',action:'Our shared purpose'}, {label:'Build for tomorrow',title:<>A stronger<br/>tomorrow.</>,image:'Automobile/banner.png',text:'Invest in people and capabilities that create lasting value.',link:'/about/#values',action:'What moves us'}, {label:'One HAMS',title:<>Different businesses.<br/>Shared standards.</>,image:'IT/coding-laptop.jpg',text:'People + Technology + Execution. Moving forward together.',link:'/board-members/',action:'Meet our leadership'}].map((story,index)=><article className="progress-story" key={story.label}><img src={asset(story.image)} alt="" loading="lazy"/><div className="story-shade"/><div className="shell story-copy"><p className="eyebrow">0{index+1} / {story.label}</p><h2>{story.title}</h2><p>{story.text}</p><a className="outline-link" href={sitePath(story.link)}>{story.action}<Arrow/></a></div></article>)}
     </section>

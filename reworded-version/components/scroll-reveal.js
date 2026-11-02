@@ -18,6 +18,7 @@ const targets = [
   'main .sector-tabs', 'main .sector-panel', 'main .all-company-grid > a',
   'main .leadership-feature-image', 'main .people-grid > a', 'main .outline-link',
   'main .round-link', 'footer .footer-top > *', 'footer .footer-columns > div',
+  'main .accordion-panel',
 ].join(', ');
 
 export default function ScrollReveal() {
@@ -59,6 +60,8 @@ export default function ScrollReveal() {
             trigger:hero, start:'top top', end:'bottom top', pin:true,
             pinSpacing:false, scrub:.7, anticipatePin:1, invalidateOnRefresh:true,
           }});
+          const chair = document.querySelector('.chairperson-section');
+          if(chair) gsap.fromTo(chair, {clipPath:'inset(7% 0 0 0)'}, {clipPath:'inset(0%)',ease:'none',scrollTrigger:{trigger:chair,start:'top bottom',end:'top 25%',scrub:1}});
         }
         document.querySelectorAll('.reading-statement, .chairperson-statement').forEach(statement => {
           const chars=statement.querySelectorAll('[data-reading-word], [data-reading-char]');

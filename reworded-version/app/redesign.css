@@ -264,3 +264,21 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 .cinematic-hero:after { content:''; position:absolute; inset:0; background:#03172d; opacity:var(--cover-shade); pointer-events:none; z-index:2; }
 .chairperson-section { position:relative; z-index:3; box-shadow:0 -25px 70px #03172d20; }
 @media(prefers-reduced-motion:reduce) { .chairperson-section { box-shadow:none; } }
+
+.business-accordion { display:flex; gap:8px; margin:50px 4% 0; height:620px; }
+.accordion-panel { flex:1 1 0; min-width:0; position:relative; overflow:hidden; background:var(--navy); transition:flex-grow 1s cubic-bezier(.22,1,.36,1); }
+.accordion-panel.is-active { flex-grow:10; }
+.accordion-panel>img,.accordion-shade { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.accordion-panel>img { width:100%; transition:filter .7s; }
+.accordion-shade { background:linear-gradient(0deg,#03172de8,transparent 90%); pointer-events:none; }
+.accordion-trigger { position:absolute; inset:0; width:100%; background:none; border:0; color:white; z-index:2; }
+.accordion-trigger>span { position:absolute; bottom:35px; left:50%; writing-mode:vertical-rl; transform:translateX(-50%) rotate(180deg); font-size:21px; white-space:nowrap; transition:opacity .3s; }
+.is-active .accordion-trigger { inset:0 0 auto; height:70px; }
+.is-active .accordion-trigger>span { opacity:0; }
+.accordion-trigger:focus-visible { outline:3px solid var(--gold); outline-offset:-5px; }
+.accordion-details { position:absolute; bottom:50px; left:45px; right:45px; color:white; opacity:0; transform:translateY(22px); visibility:hidden; transition:opacity .4s,transform .5s,visibility .4s; }
+.is-active .accordion-details { opacity:1; transform:none; visibility:visible; transition-delay:.35s; }
+.accordion-details h3 { font-size:40px; letter-spacing:-.04em; margin-bottom:22px; }
+.accordion-details p { font-size:14px; line-height:1.8; max-width:550px; margin-bottom:28px; }
+@media(max-width:600px){.business-accordion { flex-direction:column; height:850px; margin:30px 20px 0; gap:8px; }.accordion-panel.is-active { flex-grow:6; }.accordion-trigger>span { writing-mode:horizontal-tb; transform:none; left:22px; bottom:22px; font-size:18px; }.accordion-details { left:25px; right:25px; bottom:30px; }.accordion-details h3 { font-size:30px; }.accordion-details p { font-size:13px; }}
+@media(prefers-reduced-motion:reduce){.accordion-panel,.accordion-details { transition:none; }}

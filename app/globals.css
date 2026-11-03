@@ -403,7 +403,7 @@ footer { padding:55px 0 25px; }
 .about-direction-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; }
 .about-direction h2 { font-size:40px; }
 .about-direction article p:last-child { color:var(--muted); font-size:15px; line-height:1.9; margin:25px 0 0; }
-.about-portfolio { display:grid; grid-template-columns:repeat(5,1fr); gap:25px; margin:40px 0; }
+.about-portfolio { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; margin:40px 0; }
 .about-portfolio>a { position:relative; border-block:1px solid #dfe5eb; padding:25px 0 45px; }
 .about-portfolio>a>span { color:#947318; font-size:11px; }
 .about-portfolio h3 { color:var(--navy); font-size:20px; margin:20px 0 12px; }

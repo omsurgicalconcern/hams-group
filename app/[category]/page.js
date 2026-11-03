@@ -7,6 +7,15 @@ import CompanyCard from '../../components/company-card';
 import Arrow from '../../components/arrow';
 import BrandAlliances from '../../components/brand-alliances';
 
+const businessTaglines = {
+  hospital: 'Expert care, close to you',
+  automobile: 'Driving new possibilities',
+  'medical-devices': 'Equipping better care',
+  education: 'Learning today. Caring tomorrow',
+  'it-ites': 'Ideas into digital possibilities',
+  'agro-sector': 'Growing from the ground up',
+};
+
 export const dynamicParams = false;
 export function generateStaticParams() { return categories.map(category => ({ category: category.slug })); }
 export async function generateMetadata({ params }) {
@@ -21,6 +30,7 @@ export default async function CategoryPage({ params }) {
   if (!category) notFound();
   const members = companiesIn(slug);
   const banner = {
+    'agro-sector': { image: 'Agro Sector/Agro Sector Banner.jpg', alt: 'Sindhu Poultry and Research Center in Sindhupalchok, Nepal', width: 2048, height: 1536 },
     hospital: { image: 'Hospital/HAMS/HAMS Hospital Entrance.png', alt: 'HAMS Hospital entrance in Kathmandu', width: 1448, height: 1086 },
     automobile: { image: 'Automobile/banner.JPG', alt: 'HAMs Motors passenger van on a rural road in Nepal', width: 6928, height: 4619 },
     'medical-devices': { image: 'Medical-devices/medical-team.png', alt: 'The medical devices team gathered outside their office', width: 2529, height: 1126 },
@@ -36,7 +46,7 @@ export default async function CategoryPage({ params }) {
       <Breadcrumbs items={[{ label: 'Home', href: sitePath('/') }, { label: category.name }]} />
       <div className="category-intro-grid"><div><p className="eyebrow">Our businesses / {category.number}</p><h1>{category.name}<span>.</span></h1><p className="category-tagline">{category.message}</p></div><div className="category-lead"><h2>{category.headline}</h2><p>{category.description}</p><span className="category-member-count">{String(members.length).padStart(2, '0')} {members.length === 1 ? 'company' : 'companies'} · One shared purpose</span></div></div>
     </div></section>}
-    <section className="section-space category-companies"><div className="shell"><div className="section-heading"><div><p className="eyebrow">Meet our companies</p><h2>Progress, in practice<span className="gold-dot">.</span></h2></div><p>Discover the people and businesses<br />behind our shared purpose.</p></div><div className={`company-grid${members.length === 1 ? ' single-company-grid' : ''}`}>{members.map(company => <CompanyCard company={company} key={company.slug} />)}</div></div></section>
+    <section className="section-space category-companies"><div className="shell"><div className="section-heading"><div><p className="eyebrow">Meet our companies</p><h2>{businessTaglines[slug]}<span className="gold-dot">.</span></h2></div><p>Discover the people and businesses<br />behind our shared purpose.</p></div><div className={`company-grid${members.length === 1 ? ' single-company-grid' : ''}`}>{members.map(company => <CompanyCard company={company} key={company.slug} />)}</div></div></section>
     {(slug === 'medical-devices' || slug === 'automobile') && <BrandAlliances category={slug} />}
     <section className="category-purpose"><div className="shell"><p className="eyebrow text-gold">{category.name} at HAMS</p><h2>{category.headline}</h2><div className="category-pillars">{category.focus.map((focus, index) => <div key={focus}><span>0{index + 1}</span><h3>{focus}</h3></div>)}</div></div></section>
 

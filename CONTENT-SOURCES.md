@@ -51,3 +51,7 @@ Chairperson portrait updated with the user-supplied photograph on 2 November 202
 - HAMS Hospital and Nagarik profiles/cards use the new `HAMS Hospital Entrance.png` and `Nagarik Hospital.jpeg` photographs. The homepage hospital hero/business panel uses the new HAMS photograph.
 - Automobile category banner uses `Automobile/banner.JPG`; homepage hero/business panel and HAMs Motors cards/profile use `Automobile/HAMs Motor/HAMsMotors-Showroom.png`.
 - Medical Devices category banner and homepage hero/business panel use the supplied cropped `Medical-devices/medical-team.png`.
+
+## Agro Sector — 3 November 2026
+
+Sindhu Poultry and Research Center, Sindhupalchok, Nepal: name, location and sector supplied by the user. Introductory copy is based on that supplied information. No external website or contact details were provided. Supplied images in `public/images/Agro Sector/`: `Sindhu Poultry Hero Section.png` for the homepage hero and business panel, `Agro Sector Banner.jpg` for the category banner, and `Individual Poultry.png` for the company card and description page.

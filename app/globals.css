@@ -210,7 +210,7 @@ footer { padding:55px 0 25px; }
 .category-pillars>div { padding-top:25px; border-top:1px solid #49617e; }
 .category-pillars span { font-size:11px; letter-spacing:.1em; color:var(--gold); }
 .category-pillars h3 { font-size:20px; font-weight:500; margin:15px 0 0; }
-.other-category-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; margin-top:40px; }
+.other-category-links { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:25px; margin-top:40px; }
 .other-category-links>a { display:flex; align-items:center; justify-content:space-between; gap:15px; color:var(--navy); border-block:1px solid #dfe5eb; padding:26px 0; font-size:19px; letter-spacing:-.025em; }
 .other-category-links>a:hover { border-color:var(--gold); }
 .company-intro { padding-bottom:42px; }
@@ -403,7 +403,7 @@ footer { padding:55px 0 25px; }
 .about-direction-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; }
 .about-direction h2 { font-size:40px; }
 .about-direction article p:last-child { color:var(--muted); font-size:15px; line-height:1.9; margin:25px 0 0; }
-.about-portfolio { display:grid; grid-template-columns:repeat(4,1fr); gap:25px; margin:40px 0; }
+.about-portfolio { display:grid; grid-template-columns:repeat(5,1fr); gap:25px; margin:40px 0; }
 .about-portfolio>a { position:relative; border-block:1px solid #dfe5eb; padding:25px 0 45px; }
 .about-portfolio>a>span { color:#947318; font-size:11px; }
 .about-portfolio h3 { color:var(--navy); font-size:20px; margin:20px 0 12px; }

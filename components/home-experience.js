@@ -1,16 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { asset, categories, companies, companiesIn, sitePath } from '../lib/businesses';
+import { asset, categories, companies, companiesIn, sectorImages, sitePath } from '../lib/businesses';
 import Arrow from './arrow';
 import { gsap } from 'gsap';
 
-export const sectorImages = {
-  hospital: 'Hospital/hams-team-upscaled.webp',
-  automobile: 'Automobile/banner.png',
-  'medical-devices': 'Medical-devices/medical-team.webp',
-  'it-ites': 'IT/coding-laptop.jpg',
-};
 const slides = [
   { name:'Human progress', title:'Moving Life\nForward.', image:'himalayan-sunrise.png', description:'Better health. Greater mobility. Smarter technology.', path:'/#businesses' },
   ...categories.map(category=>({name:category.name,title:category.message.replace('. ','.\n'),description:category.headline,image:sectorImages[category.slug],path:`/${category.slug}/`}))

@@ -1,12 +1,11 @@
 # Company content and image sources
 
-Reviewed on 1 November 2026. Company descriptions are concise paraphrases, not copied marketing paragraphs. Product prices, scale counters, certifications, clinical outcomes and testimonials are intentionally excluded.
+Reviewed on 3 November 2026. Company descriptions are concise paraphrases, not copied marketing paragraphs. Product prices, scale counters, certifications, clinical outcomes and testimonials are intentionally excluded.
 
-| Company | Official sources | Supplied / downloaded imagery |
+| Company | Content sources | Supplied / downloaded imagery |
 | --- | --- | --- |
 | HAMS Hospital | https://hamshospital.com/introduction/ and https://hamshospital.com/ | Supplied hospital photograph |
 | Nagarik Community Teaching Hospital | https://www.nagarikhospital.com.np/about-us/ and homepage (management by HAMS) | Supplied hospital photograph |
-| Sindhu Sadabahar Hospital | https://www.omsurgicalconcern.com/about (founder profile) | Supplied courtyard photograph |
 | HAMs Motors | https://hams.com.np/ | Supplied showroom photograph and logo |
 | QJMOTOR Nepal | https://www.qjmotornepal.com/ | Supplied showroom photograph and logo |
 | Om Surgical Concern | https://www.omsurgicalconcern.com/ and https://www.omsurgicalconcern.com/about | Supplied logos; downloaded https://www.omsurgicalconcern.com/HERO-IMAGE.png |
@@ -15,13 +14,13 @@ Reviewed on 1 November 2026. Company descriptions are concise paraphrases, not c
 
 OmniTrident's homepage was retrieved directly because the web reader could not access it. Its published services are website development, software development, digital marketing and AI automation. The page identifies it as a HAMS Group company.
 
-Contact information is shown only where published on the official sources. Company website buttons open the external website; no bookings, purchases or enquiries are submitted by this site. Sindhu Sadabahar has no verified standalone website in the supplied list, so its page links to the source company profile and the hospital category.
+Contact information is shown only where published on the official sources. Company website buttons open the external website; no bookings, purchases or enquiries are submitted by this site. HAMS Nursing College uses Edusanjal as a third-party content reference, explicitly labelled as a college profile rather than an official website.
 
 The original supplied assets remain in `public/images/`. Where production WebP variants are used, they are resized/compressed copies; source files are preserved.
 
 ## Category banners
 
-Automobiles uses the supplied `public/images/Automobile/banner.png` in the same photo-banner layout as Hospitals. IT & ITES uses `public/images/IT/coding-laptop.jpg`, downloaded from the user-selected [James Harrison photo on Unsplash](https://unsplash.com/photos/black-laptop-computer-turned-on-on-table-vpOeXr5wmR4) on 2 November 2026, under the Unsplash License. Download URL: https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&fm=jpg&q=85&w=2400.
+Automobiles uses the supplied `public/images/Automobile/banner.JPG` in the same photo-banner layout as Hospitals. IT & ITES uses `public/images/IT/coding-laptop.jpg`, downloaded from the user-selected [James Harrison photo on Unsplash](https://unsplash.com/photos/black-laptop-computer-turned-on-on-table-vpOeXr5wmR4) on 2 November 2026, under the Unsplash License. Download URL: https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&fm=jpg&q=85&w=2400.
 
 ## Leadership
 
@@ -43,3 +42,12 @@ The local reworded-version project uses https://www.adani.com/ as its presentati
 Hero/chairperson refinement: the hero occupies exactly one dynamic viewport, transitions from a bottom-right image frame to full screen over 1.1 seconds and stages copy at 0.5/0.75/1-second delays. All slideshow pause controls were removed. The chairperson section immediately follows the hero, with a 42.1/57.9 desktop portrait/copy split, stacked responsive layout, speech-outline detail and scroll-linked character reveal. The statement is HAMS Group copy, labelled as the group's shared purpose, rather than a personal quotation. Desktop wheel smoothing preserves native touch, keyboard, dialog and menu scrolling and respects reduced motion.
 
 Chairperson portrait updated with the user-supplied photograph on 2 November 2026. Original supplied file saved at `public/images/leadership/ram-sharan-bhandari-portrait.png` and used on the homepage and Board Members page.
+
+## Education and image refresh — 3 November 2026
+
+- HAMS Nursing College: https://edusanjal.com/school/hams-nursing-college/ (third-party content source only). Paraphrased establishment, affiliation, course and contact details. Supplied image: `Education/hams_nursing.jpg`.
+- Everest College of Nursing: https://econ.edu.np/ and https://econ.edu.np/about (official sources). Paraphrased affiliation, programs, learning approach and contact details. Supplied image: `Education/everest_nursing.jpg`.
+- Education banner: supplied `Education/banner.jpg`.
+- HAMS Hospital and Nagarik profiles/cards use the new `HAMS Hospital Entrance.png` and `Nagarik Hospital.jpeg` photographs. The homepage hospital hero/business panel uses the new HAMS photograph.
+- Automobile category banner uses `Automobile/banner.JPG`; homepage hero/business panel and HAMs Motors cards/profile use `Automobile/HAMs Motor/HAMsMotors-Showroom.png`.
+- Medical Devices category banner and homepage hero/business panel use the supplied cropped `Medical-devices/medical-team.png`.

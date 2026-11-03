@@ -83,7 +83,7 @@ h2>span { color:var(--gold); }
 .explorer-modes { display:flex; gap:30px; }
 .explorer-modes button { border:0; border-bottom:2px solid transparent; padding:15px 0; color:var(--muted); background:none; font-size:13px; }
 .explorer-modes button[aria-pressed="true"] { color:var(--navy); border-color:var(--gold); }
-.sector-tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:25px; margin-bottom:36px; }
+.sector-tabs { display:grid; grid-template-columns:repeat(5,1fr); gap:25px; margin-bottom:36px; }
 .sector-tabs button { text-align:left; background:none; border:0; border-bottom:1px solid #cbd2d8; color:var(--muted); padding:18px 0; font-size:17px; position:relative; transition:color .3s; }
 .sector-tabs button>span { display:block; font-size:10px; margin-bottom:13px; }
 .sector-tabs button svg { position:absolute; right:0; bottom:20px; width:17px; transition:transform .3s; }

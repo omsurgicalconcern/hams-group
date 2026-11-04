@@ -191,6 +191,9 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 .footer-columns a,.footer-columns span { font-size:12px; line-height:1.8; color:var(--muted); }
 .footer-columns a:hover { color:#977722; }
 .footer-purpose { border-left:1px solid #d8dfe5; padding-left:55px; }
+.footer-location { margin-top:10px; padding-top:22px; border-top:1px solid #d8dfe5; }
+.footer-location p { margin:0 0 10px; color:var(--navy); }
+.footer-location address { font-style:normal; font-size:18px; line-height:1.6; color:var(--navy); }
 .footer-bottom { border-color:#d8dfe5; }
 .scroll-reveal { transition:opacity .9s cubic-bezier(.22,1,.36,1),translate .9s cubic-bezier(.22,1,.36,1); transition-delay:var(--reveal-delay,0ms); }
 .scroll-reveal[data-reveal-state="pending"] { opacity:0; translate:0 55px; }

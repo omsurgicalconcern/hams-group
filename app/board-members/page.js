@@ -3,7 +3,9 @@ import SiteFooter from '../../components/site-footer';
 import Breadcrumbs from '../../components/breadcrumbs';
 import { asset, sitePath } from '../../lib/businesses';
 
-export const metadata = { title: 'Board Members | HAMS Group', description: 'Meet HAMS Group Chairperson Ram Sharan Bhandari and CEO Ajay Bhardwaj.' };
+import { pageMetadata } from '../../lib/seo';
+
+export const metadata = pageMetadata('Board Members | HAMS Group', 'Meet HAMS Group Chairperson Ram Sharan Bhandari and CEO Ajay Bhardwaj.', '/board-members/');
 
 export default function BoardMembersPage() {
   return <><SiteHeader /><main id="main"><section className="editorial-intro"><div className="shell"><Breadcrumbs items={[{label:'Home',href:sitePath('/')},{label:'Board Members'}]} /><p className="eyebrow">Our leadership</p><h1 id="board-heading">Board Members<span>.</span></h1><p className="editorial-lead">The people guiding our shared direction.</p></div></section>

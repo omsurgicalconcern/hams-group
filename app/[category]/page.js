@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/breadcrumbs';
 import CompanyCard from '../../components/company-card';
 import Arrow from '../../components/arrow';
 import BrandAlliances from '../../components/brand-alliances';
+import { categorySeo, pageMetadata } from '../../lib/seo';
 
 const businessTaglines = {
   hospital: 'Expert care, close to you',
@@ -21,7 +22,9 @@ export function generateStaticParams() { return categories.map(category => ({ ca
 export async function generateMetadata({ params }) {
   const { category: slug } = await params;
   const category = categories.find(item => item.slug === slug);
-  return { title: `${category?.name || 'Businesses'} | HAMS Group`, description: category?.description };
+  if (!category) notFound();
+  const seo = categorySeo[slug];
+  return pageMetadata(seo?.title || `${category.name} in Nepal | HAMS Group`, seo?.description || category.description, `/${category.slug}/`, seo?.keywords || [category.name]);
 }
 
 export default async function CategoryPage({ params }) {

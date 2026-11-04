@@ -4,9 +4,24 @@ import SiteFooter from '../components/site-footer';
 import { CinematicHero, BusinessExplorer, ChairpersonStatement } from '../components/home-experience';
 import Arrow from '../components/arrow';
 import { asset, sitePath } from '../lib/businesses';
+import { pageMetadata, siteUrl } from '../lib/seo';
+import StructuredData from '../components/structured-data';
+
+export const metadata = pageMetadata(
+  'HAMS Group Nepal | Healthcare, Motors & More',
+  'Discover HAMS Group Nepal: HAMS Hospital, Nagarik Hospital, HAMs Motors, QJMOTOR Nepal, medical devices, nursing education, IT services and agriculture.',
+  '/',
+  ['HAMS Hospital', 'Hams Motor', 'HAMs Motors', 'Nagarik Hospital', 'QJ Motor', 'QJMOTOR Nepal'],
+);
 
 export default function Home() {
-  return <><SiteHeader/><main id="main"><CinematicHero/><ChairpersonStatement/><BusinessAccordion/>
+  return <><StructuredData data={{
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'HAMS Group', alternateName: 'HAMS Group Nepal', url: `${siteUrl}/`, logo: `${siteUrl}/images/hams-logo.svg`, description: metadata.description, address: { '@type': 'PostalAddress', streetAddress: 'Panipokhari', addressLocality: 'Kathmandu', addressCountry: 'NP' } },
+      { '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'HAMS Group', alternateName: 'HAMS Group Nepal', url: `${siteUrl}/`, publisher: { '@id': `${siteUrl}/#organization` }, inLanguage: 'en' },
+    ],
+  }}/><SiteHeader/><main id="main"><CinematicHero/><ChairpersonStatement/><BusinessAccordion/>
     <section className="progress-stories" aria-label="What moves us">
       {[{label:'Human first',title:<>Progress with<br/>people at its heart.</>,image:'Hospital/hams-team-upscaled.webp',text:'Our measure of progress is what becomes possible for people, organisations and communities.',link:'/about/',action:'Our shared purpose'}, {label:'Build for tomorrow',title:<>A stronger<br/>tomorrow.</>,image:'Automobile/banner.JPG',text:'Invest in people and capabilities that create lasting value.',link:'/about/#values',action:'What moves us'}, {label:'One HAMS',title:<>Different businesses.<br/>Shared standards.</>,image:'IT/coding-laptop.jpg',text:'People + Technology + Execution. Moving forward together.',link:'/board-members/',action:'Meet our leadership'}].map((story,index)=><article className="progress-story" key={story.label}><img src={asset(story.image)} alt="" loading="lazy"/><div className="story-shade"/><div className="shell story-copy"><p className="eyebrow">0{index+1} / {story.label}</p><h2>{story.title}</h2><p>{story.text}</p><a className="outline-link" href={sitePath(story.link)}>{story.action}<Arrow/></a></div></article>)}
     </section>

@@ -5,6 +5,7 @@ import SiteFooter from '../../../components/site-footer';
 import Breadcrumbs from '../../../components/breadcrumbs';
 import CompanyCard from '../../../components/company-card';
 import Arrow from '../../../components/arrow';
+import { companySeo, pageMetadata } from '../../../lib/seo';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -13,7 +14,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { category, company: slug } = await params;
   const company = companies.find(item => item.category === category && item.slug === slug);
-  return { title: `${company?.name || 'Company'} | HAMS Group`, description: company?.summary };
+  if (!company) notFound();
+  const seo = companySeo[slug];
+  return pageMetadata(seo?.title || `${company.name} | HAMS Group Nepal`, seo?.description || `${company.name}: ${company.summary} Explore services and company details through HAMS Group Nepal.`, `/${company.category}/${company.slug}/`, seo?.keywords || [company.name, company.shortName]);
 }
 
 export default async function CompanyPage({ params }) {

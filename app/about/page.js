@@ -4,7 +4,9 @@ import Breadcrumbs from '../../components/breadcrumbs';
 import Arrow from '../../components/arrow';
 import { asset, categories, sitePath } from '../../lib/businesses';
 
-export const metadata = { title: 'About HAMS | HAMS Group', description: 'Human Progress unites HAMS Group across healthcare, mobility, medical technology, education, digital services and agriculture.' };
+import { pageMetadata } from '../../lib/seo';
+
+export const metadata = pageMetadata('About HAMS | HAMS Group', 'Human Progress unites HAMS Group across healthcare, mobility, medical technology, education, digital services and agriculture.', '/about/');
 const values = [
   ['Human First', 'Start with the person behind every need. Build around their experience, safety and opportunity.'],
   ['Earn Trust', 'Say what we mean, do what we say and protect long-term relationships.'],

@@ -16,10 +16,10 @@ export default function SiteFooter() {
         <span>Rooted in Nepal. Looking ahead.</span>
         <div className="footer-location">
           <p>Corporate building</p>
-          <address>Panipokhari,<br />Kathmandu, Nepal</address>
+          <address>Panipokhari-03,<br />Kathmandu, Nepal</address>
         </div>
       </div>
     </div>
-    <div className="footer-bottom"><span>© {new Date().getFullYear()} HAMS Group.</span><span>People + Technology + Execution</span><span>Panipokhari, Kathmandu, Nepal</span></div>
+    <div className="footer-bottom"><span>© {new Date().getFullYear()} HAMS Group.</span><span>People + Technology + Execution</span><span>Panipokhari-03, Kathmandu, Nepal</span></div>
   </div></footer>;
 }

@@ -6,6 +6,8 @@ import Breadcrumbs from '../../../components/breadcrumbs';
 import CompanyCard from '../../../components/company-card';
 import Arrow from '../../../components/arrow';
 import { companySeo, pageMetadata } from '../../../lib/seo';
+import { companySchema } from '../../../lib/schema';
+import StructuredData from '../../../components/structured-data';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -25,7 +27,7 @@ export default async function CompanyPage({ params }) {
   const category = categories.find(item => item.slug === categorySlug);
   if (!company || !category) notFound();
   const related = companiesIn(categorySlug).filter(item => item.slug !== companySlug);
-  return <><SiteHeader /><main id="main">
+  return <><StructuredData data={companySchema(company)} /><SiteHeader /><main id="main">
     <section className="company-profile"><div className="shell">
       <Breadcrumbs items={[{ label: 'Home', href: sitePath('/') }, { label: category.name, href: sitePath(`/${category.slug}/`) }, { label: company.shortName }]} />
       <div className="profile-intro">

@@ -36,7 +36,7 @@ export default async function CategoryPage({ params }) {
     'agro-sector': { image: 'Agro Sector/Agro Sector Banner.jpg', alt: 'Sindhu Poultry and Research Center in Sindhupalchok, Nepal', width: 2048, height: 1536 },
     hospital: { image: 'Hospital/HAMS/HAMS Hospital Entrance.png', alt: 'HAMS Hospital entrance in Kathmandu', width: 1448, height: 1086 },
     automobile: { image: 'Automobile/banner.JPG', alt: 'HAMs Motors passenger van on a rural road in Nepal', width: 6928, height: 4619 },
-    'medical-devices': { image: 'Medical-devices/medical-team.png', alt: 'The medical devices team gathered outside their office', width: 2529, height: 1126 },
+    'medical-devices': { image: 'Medical-devices/medical-surgical-team.webp', alt: 'The medical and surgical team gathered for a group photo', width: 2400, height: 1380 },
     education: { image: 'Education/banner.jpg', alt: 'Nursing education at HAMS Group', width: 2048, height: 1218 },
     'it-ites': { image: 'IT/coding-laptop.jpg', alt: 'Laptop displaying software code beside a plant on a table', width: 2400, height: 1350 },
   }[slug];

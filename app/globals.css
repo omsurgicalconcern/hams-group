@@ -201,7 +201,7 @@ footer { padding:55px 0 25px; }
 .company-card-copy>p { color:var(--muted); font-size:13px; line-height:1.8; margin-bottom:24px; }
 .company-card .card-link { font-size:12px; }
 .single-company-grid { grid-template-columns:1fr; max-width:100%; }
-.single-company-grid .company-card { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:65px; }
+.single-company-grid .company-card-main { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:65px; }
 .single-company-grid .company-card-copy h3 { font-size:35px; }
 .single-company-grid .company-card-copy { padding-top:0; }
 .category-purpose { background:var(--navy); color:white; padding:75px 0; }
@@ -263,7 +263,7 @@ footer { padding:55px 0 25px; }
   .company-title-row { flex-direction:column; align-items:flex-start; gap:28px; }
   .company-overview-grid,.company-contact-grid { gap:45px; }
   .company-description { font-size:16px; }
-  .single-company-grid .company-card { gap:35px; }
+  .single-company-grid .company-card-main { gap:35px; }
 }
 @media(max-width:800px) {
   .company-slide { aspect-ratio:4/4.4; }
@@ -276,7 +276,7 @@ footer { padding:55px 0 25px; }
   .company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:35px 22px; }
   .company-card-copy h3 { font-size:21px; }
   .single-company-grid { grid-template-columns:1fr; }
-  .single-company-grid .company-card { grid-template-columns:1fr; gap:25px; }
+  .single-company-grid .company-card-main { grid-template-columns:1fr; gap:25px; }
   .single-company-grid .company-card-copy h3 { font-size:30px; }
   .company-overview-grid,.company-contact-grid { grid-template-columns:1fr; gap:35px; }
   .company-overview h2 { max-width:100%; }

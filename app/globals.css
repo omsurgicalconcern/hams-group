@@ -409,7 +409,7 @@ footer { padding:55px 0 25px; }
 .about-portfolio h3 { color:var(--navy); font-size:20px; margin:20px 0 12px; }
 .about-portfolio p { color:var(--muted); font-size:12px; line-height:1.8; }
 .about-portfolio svg { position:absolute; bottom:15px; right:0; color:#947318; width:18px; }
-.medical-devices-photo-hero .category-photo-background { object-position:center 75%; }
+.medical-devices-photo-hero .category-photo-background { object-position:center top; }
 @media(max-width:800px) { .about-story,.about-direction-grid { grid-template-columns:1fr; gap:40px; } .about-brand { padding:45px 30px; } .about-portfolio { grid-template-columns:1fr 1fr; } .about-direction h2 { font-size:35px; } }
 @media(max-width:480px) { .editorial-lead { font-size:16px; } .about-story p:not(.eyebrow) { font-size:15px; } .about-portfolio { gap:20px; } .about-portfolio h3 { font-size:18px; } }
 @media(max-width:1000px) { .profile-intro,.profile-row { gap:40px; grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr); } .profile-services { grid-template-columns:1fr; gap:18px; } }

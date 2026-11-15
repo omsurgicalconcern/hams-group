@@ -296,3 +296,7 @@ main:not(:has(.cinematic-hero)) { padding-top:94px; }
 .all-company-main { display:block; position:relative; padding-right:20px; }
 .all-company-main>svg { right:0; bottom:0; }
 .all-company-card .company-socials { position:relative; }
+
+/* Keep the team faces in frame across the medical banner and home sections. */
+img[src$="medical-surgical-team.webp"] { object-position:center top; transform-origin:center top; }
+.medical-devices-photo-hero .category-photo-background { top:0; height:100%; }

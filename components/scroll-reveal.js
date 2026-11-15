@@ -46,6 +46,7 @@ export default function ScrollReveal() {
             animations.set(el,tween);
           });
           document.querySelectorAll('.progress-story > img, .category-photo-background, .chairperson-portrait img, .sector-panel > img').forEach(image => {
+            if (image.closest('.medical-devices-photo-hero')) return;
             if(seen.has(image))return;
             seen.add(image);
             gsap.fromTo(image,{yPercent:-6,scale:1.14},{yPercent:6,scale:1.14,ease:'none',scrollTrigger:{trigger:image.parentElement,start:'top bottom',end:'bottom top',scrub:1.1,invalidateOnRefresh:true}});

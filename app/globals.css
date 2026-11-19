@@ -428,6 +428,7 @@ footer { padding:55px 0 25px; }
 .alliance-group { display:flex; flex-shrink:0; align-items:center; gap:32px; padding-right:32px; }
 .alliance-logo { display:flex; flex-shrink:0; align-items:center; justify-content:center; width:210px; height:120px; padding:20px; background:white; border:1px solid #e7e9ed; transition:border-color .3s,box-shadow .3s; }
 .alliance-logo img { width:100%; height:80px; object-fit:contain; transition:transform .3s; }
+.alliance-static .alliance-logo img.alliance-logo-compact { width:50%; }
 .alliance-logo:hover { border-color:var(--gold); box-shadow:0 6px 18px #082d5b0c; }
 .alliance-logo:hover img { transform:scale(1.06); }
 .alliance-wordmark { color:var(--navy); font-size:30px; font-weight:800; letter-spacing:.025em; text-transform:uppercase; }

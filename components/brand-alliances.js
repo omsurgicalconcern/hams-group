@@ -5,7 +5,7 @@ const motorBrands = [
   { name: 'Kawei', image: 'Automobile/Kawei Logo Blue.png' },
   { name: 'QJ Motor', image: 'Automobile/QJ Motor/qjmotor-logo.png' },
   { name: 'Naveco', image: 'Automobile/Naveco Logo blue.png' },
-  { name: 'IVECO', image: 'Automobile/iveco-logo.jpg' },
+  { name: 'IVECO', image: 'Automobile/iveco-logo.jpg', logoClassName: 'alliance-logo-compact' },
 ];
 
 export default function BrandAlliances({ category }) {
@@ -23,7 +23,7 @@ export default function BrandAlliances({ category }) {
           {brand.image ? <img src={asset(brand.image)} alt="" width="180" height="100" loading="lazy" /> : <span className="alliance-wordmark">{brand.name}</span>}
         </div>)}</div>)}
       </div>
-    </div> : <div className="shell alliance-static">{brands.map(brand => <div className="alliance-logo" key={brand.name}><img src={asset(brand.image)} alt={brand.name} width="180" height="100" loading="lazy" /></div>)}</div>}
+    </div> : <div className="shell alliance-static">{brands.map(brand => <div className="alliance-logo" key={brand.name}><img className={brand.logoClassName} src={asset(brand.image)} alt={brand.name} width="180" height="100" loading="lazy" /></div>)}</div>}
     {medical && <ul className="sr-only" aria-label="Brands we offer">{brands.map(brand => <li key={brand.name}>{brand.name}</li>)}</ul>}
   </section>;
 }

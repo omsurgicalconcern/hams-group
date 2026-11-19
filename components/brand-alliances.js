@@ -5,6 +5,7 @@ const motorBrands = [
   { name: 'Kawei', image: 'Automobile/Kawei Logo Blue.png' },
   { name: 'QJ Motor', image: 'Automobile/QJ Motor/qjmotor-logo.png' },
   { name: 'Naveco', image: 'Automobile/Naveco Logo blue.png' },
+  { name: 'IVECO', image: 'Automobile/iveco-logo.jpg' },
 ];
 
 export default function BrandAlliances({ category }) {
@@ -14,7 +15,7 @@ export default function BrandAlliances({ category }) {
     <div className="shell alliance-heading">
       <p className="eyebrow">Global alliances</p>
       <h2 id="alliance-title">Brands we offer<span className="gold-dot">.</span></h2>
-      <p className="alliance-description">{medical ? 'Global medical technology brands offered through Om Surgical Concern.' : 'Kawei, QJ Motor and Naveco. More possibilities on the road.'}</p>
+      <p className="alliance-description">{medical ? 'Global medical technology brands offered through Om Surgical Concern.' : 'Kawei, QJ Motor, Naveco and IVECO. More possibilities on the road.'}</p>
     </div>
     {medical ? <div className="alliance-marquee">
       <div className="alliance-track" aria-hidden="true">
